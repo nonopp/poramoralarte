@@ -1,0 +1,40 @@
+<!--
+ ! Excerpted from "Build Websites with Hugo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhhugo for more book information.
+-->
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+    {{- partial "head.html" . -}}
+
+<body class="is-boxed has-animations">
+
+    {{- partial "header.html" . -}}
+
+        <main>
+			<section class="newsletter section">
+                <div class="container-sm">
+                    <div class="newsletter-inner section-inner">
+
+                        <h2 class="section-title mt-0">{{  .Title}}</h2>
+                        <p class="hero-paragraph">{{ .Content }}</p>
+
+  <ul>
+    {{ range .Pages }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  
+</div>
+</div>
+</section>
+</main>
+
+{{- partial "footer.html" . -}}
+
+</body>
+</html>

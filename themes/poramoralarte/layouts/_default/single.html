@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+    {{- partial "head.html" . -}}
+
+<body class="is-boxed has-animations">
+
+    {{- partial "header.html" . -}}
+
+        <main>
+
+			<section class="newsletter section">
+                <div class="container-sm">
+                    <div class="newsletter-inner section-inner">
+                        
+                            <h2 class="section-title mt-0">{{  .Title}}</h2>
+                            <p class="hero-paragraph">{{ .Content }}</p>
+                                
+                        
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        {{- partial "footer.html" . -}}
+
+</body>
+</html>
